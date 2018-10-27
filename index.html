@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <audio id="my_audio" src="bg.mp3" loop="loop"></audio>
+        <audio id="my_audio" src="sirena.mp3" loop="loop"></audio>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+ <script>
+
+
+annyang.setLanguage('es-ES');
+
+
+
+ var commands = {'test': helloFunction,  'core': helloFunction, 'the cors': helloFunction, 'the core': helloFunction};
+
+// Add some commands
+annyang.addCommands(commands);
+
+annyang.start({ autoRestart: true, continuous: false });
+
+function helloFunction() {
+    
+    console.log('test')
+    document.getElementById("my_audio").play();
+        
+}
+
+ </script>
+
+</body>
+</html>
